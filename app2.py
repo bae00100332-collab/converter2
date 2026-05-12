@@ -7,6 +7,17 @@ from plotly.subplots import make_subplots
 # 페이지 설정
 st.set_page_config(page_title="Half-Bridge Converter Simulator", layout="wide")
 st.title("⚡ Half-Bridge Converter Interactive Simulator")
+# 상단 레이아웃 설정
+col1, col2 = st.columns([1, 1])
+
+with col1:
+    st.image("circuit.png", caption="Half-Bridge Converter with Leakage Inductor", use_container_width=True)
+
+with col2:
+    st.markdown("### 🔍 주요 동작 원리")
+    st.write("1차측 인덕터($L_{lk}$)에 의해 전류의 방향 전환(Commutation) 지연이 발생합니다.")
+    st.latex(r"V_{L,peak} = n \cdot \frac{V_i}{2} - V_o")
+    st.info("그래프에서 VL이 0V인 구간이 바로 1차측 전류가 차오르는 'Commutation' 구간입니다.")
 st.markdown("1차측 누설 인덕턴스($L_{lk}$)가 포함된 하프 브리지 회로의 동특성을 시뮬레이션합니다.")
 
 # 사이드바: 파라미터 조절
