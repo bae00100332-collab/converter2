@@ -90,7 +90,7 @@ fig.add_trace(go.Scatter(x=df['t'], y=df['g1'], name="S1 Gate", line=dict(color=
 fig.add_trace(go.Scatter(x=df['t'], y=df['ip'], name="Primary Current (ip)", line=dict(color='purple')), row=1, col=1)
 
 # Subplot 2: 인덕터 전압 (VL)
-fig.add_trace(go.Scatter(x=df['t'], y=df['vL'], name="Inductor Voltage (VL)", line=dict(color='green', fill='tozeroy')), row=2, col=1)
+fig.add_trace(go.Scatter(x=df['t'], y=df['vL'], name="Inductor Voltage (VL)", fill='tozeroy', line=dict(color='green')), row=2, col=1)
 
 # Subplot 3: 출력 전류 및 전압
 fig.add_trace(go.Scatter(x=df['t'], y=df['iL'], name="Inductor Current (iL)", line=dict(color='orange')), row=3, col=1)
